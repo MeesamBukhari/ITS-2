@@ -1,0 +1,24 @@
+---
+title: Reviews
+layout: default
+---
+
+<section id="reviews">
+    <div class="about">
+        <div class="container">
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.["Hero Description"] }}</p>
+        </div>
+    </div>
+    <section id="dome-features-links" class="features-grid-cards explore-area ripped ripped-cream">
+        <div class="container flex card-container">
+            {% for review in page.["Field name"] %}
+            <div class="card">
+                {% include stars.html %}
+                <h4>{{ review.Name }}</h4>
+                <p>{{ review.Review | markdownify }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</section>

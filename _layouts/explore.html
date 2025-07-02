@@ -1,0 +1,28 @@
+---
+title: Explore
+layout: default
+---
+
+<section id="explore">
+    <div class="about">
+        <div class="container">
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.["Hero Description"] }}</p>
+        </div>
+    </div>
+    <div class="grounds-map">
+        {% include map-area.html %}
+    </div>
+    <section id="dome-features-links" class="features-grid-cards explore-area ripped-cream after-ripped-cream ripped footer-home">
+        <div class="container flex card-container">
+            {% for location in page.["Explore Locations Grid"] %}
+            <div class="card">
+                <img src="{{ location.Image }}" alt="{{ location.Title }}">
+                <h3>{{ location.Title }}</h3>
+                <p>{{ location.Description | markdownify }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</section>
+

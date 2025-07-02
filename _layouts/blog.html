@@ -1,0 +1,26 @@
+---
+title: Blog
+layout: default
+---
+
+<section id="explore" class="after-ripped">
+    <div class="about">
+        <h2>{{ page.title }}</h2>
+    </div>
+</section>
+<section id="dome-features-links" class="features-grid-cards explore-area ripped ripped-cream">
+    <div class="container flex card-container">
+        {% assign blogList = site.stories %}
+        {% for blog in blogList %}
+        <div class="card">
+            <img src="{{ blog.Image }}" alt="{{ blog.title }}">
+            <h3>{{ blog.title }}</h3>
+            <p>{{ blog.excerpt | truncatewords: 20 }}</p>
+            <a href="{{ blog.url }}" class="btn">View post</a>
+        </div>
+        {% else %}
+        <p>No blog posts found. Check if your `stories` folder and `_config.yml` are correctly set up.</p>
+        {% endfor %}
+    </div>
+</section>
+

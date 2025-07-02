@@ -1,0 +1,79 @@
+---
+title: Events
+layout: default
+---
+
+<section id="feasting">
+    <div class="hero-image">
+        <div class="centred-content">
+            <h4>{{ page.title }}</h4>
+            <p>{{ page.["Hero Description"] }}</p>
+        </div>
+        <img src="/assets/images/events.jpg"> 
+    </div>
+</section>
+
+<section id="feastings">
+    <section id="parties" class="plan facilities-wrapper flex two-col ripped ripped-cream">
+        <div class="container flex">
+            <div class="left">
+            <h4>Celebrations</h4>
+            <p>{{ page.["Parties Description"] | markdownify }}</p>
+            </div>
+            <div class="right">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    {% for image in page.["Parties Images"] %}
+                    <div class="item"><img src="{{ image }}" alt="Parties"></div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </div>
+    </section>
+    <section id="weddings" class="plan facilities-wrapper flex two-col white ripped after-ripped">
+        <div class="container flex">
+            <div class="left">
+            <h4>WEDDINGS</h4>
+            <p>{{ page.["Wedding Description"] | markdownify }}</p>
+            <a href="https://inthestix.co.uk/uploads/In%20the%20Stix%202025.pdf" target="_blank"><p>Click here for a pdf wedding brochure.</p></a>
+            </div>
+            <div class="right">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    {% for image in page.["Weddings Images"] %}
+                    <div class="item"><img src="{{ image }}" alt="Weddings"></div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </div>
+    </section>
+    <section id="retreats" class="plan facilities-wrapper flex two-col ">
+        <div class="container flex">
+            <div class="left">
+            <h4>RETREATS</h4>
+            <p>{{ page.["Retreats Description"] | markdownify }}</p>
+            <a href="/book-now/#spa" class="btn">Book Now</a>
+            </div>
+            <div class="right">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    {% for image in page.["Retreats Images"] %}
+                    <div class="item"><img src="{{ image }}" alt="Retreats"></div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </div>
+    </section>
+    <!--section id="bbqs" class="plan facilities-wrapper flex two-col white ripped after-ripped">
+        <div class="container flex">
+            <div class="left">
+            <h4>{{page.["bbq title Section"]}}</h4>
+            <p>{{ page.["bbq title Section Text"] | markdownify }}</p>
+            </div>
+            <div class="right">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    {% for image in page.["bbq title Section Images"] %}
+                    <div class="item"><img src="{{ image }}" alt="BBQs"></div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </div>
+    </section-->
+</section>

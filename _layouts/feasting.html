@@ -1,0 +1,98 @@
+---
+title: Feasting
+layout: default
+---
+
+<section id="feasting">
+    <div class="hero-image">
+        <div class="centred-content">
+            <h4>{{ page.title }}</h4>
+            <p>{{ page.["Hero Description"] }}</p>
+        </div>
+        <img src="/assets/images/feasting.jpg"> 
+    </div>
+</section>
+
+<section id="feastings" class="ripped after-ripped">
+    <div class="container intro">
+        <h2>{{ page.["Intro Title"] }}</h2>
+        <p>{{ page.["Intro Description"] }}</p>    
+    </div>
+    <section id="field-kitchen" class="plan facilities-wrapper flex two-col white ripped">
+        <div class="container flex">
+            <div class="left">
+            <h4>{{ page.["Smoke N Sticks Title"] }}</h4>
+            <p>{{ page.["Smoke N Sticks Description"] }}</p>
+            </div>
+            <div class="right">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    {% for image in page.["Smoke N Sticks Images"] %}
+                    <div class="item"><img src="{{ image }}" alt="Smoke N Stix"></div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </div>
+    </section>
+    <section id="field-kitchen" class="plan facilities-wrapper flex two-col ripped-cream">
+        <div class="container flex">
+            <div class="left">
+            <h4>{{ page.["BBQ Title"] }}</h4>
+            <p>{{ page.["BBQ Description"] }}</p>
+            </div>
+            <div class="right">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    {% for image in page.["BBQ Images"] %}
+                    <div class="item"><img src="{{ image }}" alt="Smoke N Stix"></div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </div>
+    </section>
+    <section id="pizza-steak" class="plan facilities-wrapper flex two-col white ripped">
+        <div class="container flex">
+            <div class="left">
+            <h4>{{ page.["Pizza & Steak Nights Title"] }}</h4>
+            <p>{{ page.["Pizza & Steak Nights Description"] }}</p>
+            </div>
+            <div class="right">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    {% for image in page.["Pizza & Steak Nights Images"] %}
+                    <div class="item"><img src="{{ image }}" alt="Pizza & Steak Nights"></div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="features-grid-cards ripped-cream one-pot ripped after-ripped footer-home ">
+    <div class="container">
+        <h2>{{ page.["One Pot Meals Title"] }}</h2>
+        <p>{{ page.["One Pot Meals Description"] | markdownify }}</p>
+    </div>
+    <div class="container flex">
+        {% for meal in page.["One Pot Meals"] %}
+        <div class="card">
+            <div class="image-wrapper"><img src="{{ meal.Image }}" alt="{{ meal.Title }}"></div>
+            <h3>{{ meal.Title }}</h3>
+            <p>{{ meal.Description | markdownify }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="features-grid-cards ripped after-ripped footer-home">
+    <div class="container">
+        <h2>{{ page.["Breakfast hampers Title"] }}</h2>
+        <p>{{ page.["Breakfast hampers Description"] | markdownify }}</p>
+    </div>
+    <div class="container flex">
+        {% for hamper in page.["Breakfast hampers"] %}
+        <div class="card">
+            <div class="image-wrapper"><img src="{{ hamper.Image }}" alt="{{ hamper.Title }}"></div>
+            <h3>{{ hamper.Title }}</h3>
+            <p>{{ hamper.Description | markdownify }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>

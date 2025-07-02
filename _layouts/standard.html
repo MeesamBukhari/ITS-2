@@ -1,0 +1,16 @@
+---
+title: Standard
+layout: default
+---
+
+<section class="standard">
+<div class="container">
+    <h2>{{ page.title }}</h2>
+</div>
+<div class="max-width">
+    {% if page.Image %}
+        <img src="{{ page.Image }}">
+    {% endif %}
+    {{page.content | markdownify }}
+</div>
+</section>
