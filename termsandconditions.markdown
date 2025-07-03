@@ -4,8 +4,6 @@ permalink: "/terms-and-conditions/"
 layout: standard
 ---
 
-
-
 # TERMS OF BUSINESS FOR ‘IN THE STIX’ 
 
 This agreement grants you a short term non-exclusive licence to occupy our Property and you agree to be legally bound by it. This agreement provides information that you will need to know before you book, how to book, payment arrangements, information about arriving, staying and leaving our Property and arrangements for a change or cancellation. 
