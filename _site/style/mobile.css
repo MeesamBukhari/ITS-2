@@ -1,0 +1,488 @@
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+
+    .hero-text h1 {
+        font-size: 11.4vw;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    h2:after {
+        transform: translateY(13px);
+    }
+
+    .navbar .logo svg {
+        margin-top: 3px;
+    }
+
+    h2:before {
+        height: 90px;
+    }
+
+    header:not(.hero):after {
+        width: 103% !important;
+    }
+
+    .navbar {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .container .left h4 {
+        margin-bottom: 20px !important;
+    }
+
+    .image-par {
+        height: 32vh;
+    }
+
+    .amenities .container.flex {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+
+    .amenities .container {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .amenities .container .amenity {
+        width: 50% !important;
+    }
+
+    .plan .right {
+        margin-top: 50px !important;
+    }
+
+    .reviews-carousel {
+        width: 90% !important;
+        height: 310px !important;
+    }
+
+    .reviews {
+        padding-bottom: 50px;
+    }
+
+    .instagram behold-widget {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .carousel-item {
+        width: 60% !important;
+    }
+
+    .carousel-item img {
+        max-width: 284px !important;
+        width: 100% !important;
+    }
+
+    .awards-carousel {
+        width: 90% !important;
+    }
+
+    .map-header {
+        text-align: center !important;
+    }
+
+    .map-header h3 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 70% !important;
+        line-height: 1.2 !important;
+        margin-bottom: 40px !important;
+    }
+
+    footer .newsletter input {
+        width: 90% !important;
+    }
+
+    footer .newsletter button {
+        width: auto !important;
+    }
+
+    footer .container.flex {
+        flex-direction: column-reverse !important;
+    }
+
+    footer .menu ul {
+        font-size: 5.2vw !important;
+        text-align: center;
+    }
+
+    footer .menu ul.address {
+        font-size: 4.2vw !important;
+    }
+
+    .newsletter {
+        text-align: center;
+    }
+
+    footer {
+        padding-bottom: 20px;
+    }
+
+    /* General container adjustments */
+    .container, 
+    section .container, 
+    .plan .container, 
+    .footer .container {
+        width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Stack flex items vertically */
+    .flex, 
+    .container.flex, 
+    .menu.flex, 
+    .about-manifesto, 
+    .features-grid-cards .flex, 
+    .retreat-cards, 
+    .blog-cards {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Full width for flex items */
+    .flex > div, 
+    .container.flex > div, 
+    .menu.flex > *, 
+    .features-grid-cards .card, 
+    .retreat-card, 
+    .blog-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .desktop-header {
+        display: none !important;
+    }
+
+    .features-grid-cards .card h3 {
+        line-height: 1.2;
+    }
+
+    header {
+        z-index: 2000;
+    }
+
+    /* Navbar adjustments */
+    .navbar ul, 
+    .navbar .nav-links {
+        flex-direction: column !important;
+        gap: 10px !important;
+        text-align: center !important;
+    }
+
+    .navbar .container .logo {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin: 10px 0 !important;
+        width: 50% !important;
+    }
+
+    /* Hero section adjustments */
+    .hero-image {
+        height: 100vh !important;
+    }
+
+    .centred-content h4:after {
+        transform: translateY(-40px);
+    }
+
+    .centred-content p {
+        margin-top: 70px;
+        width: 310px;
+    }
+
+    .centred-content h4 {
+        font-size: 56px !important;
+    }
+
+    /* Features Grid */
+    .features-grid-cards .card, 
+    .features-grid-cards.explore-area .card {
+        width: 100% !important;
+        margin: 10px 0 !important;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .address {
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 14px !important;
+    }
+
+    .contact-info {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Adjust booking buttons */
+    .booking-buttons .btn {
+        margin: 10px 0 !important;
+        width: 100% !important;
+    }
+
+    /* Newsletter adjustments */
+    .newsletter input, 
+    .newsletter button {
+        width: 100% !important;
+        margin: 5px 0 !important;
+    }
+
+    /* Adjust maps and images */
+    .image-wrapper img, 
+    .about-width img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Adjust maps and images */
+    .map-container iframe {
+        width: 100% !important;
+        height: 500px !important;
+    }
+
+    .about-container {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .about-image {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .about-image img {
+        width: 200%;
+        transform: translateX(-11%);
+    }
+
+    .about-width {
+        display: block !important;
+    }
+
+    /* Adjust carousel */
+    .carousel-item p {
+        width: 100% !important;
+        font-size: 1.4rem !important;
+    }
+
+    .carousel-controls button {
+        padding: 20px !important;
+    }
+
+    .navbar .mobile-hamburger {
+        display: block !important;
+        width: 40px !important;
+        height: 40px !important;
+        position: absolute !important;
+        right: 20px !important;
+        top: 15px !important;
+    }
+
+    .navbar .mobile-hamburger svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .mobile-menu {
+        display: none !important;
+        background-color: #EEE7E0 !important;
+        width: 100% !important;
+        height: 87vh !important;
+        padding-left: 0 !important;
+        text-align: center;
+    }
+
+    .mobile-menu.active {
+        display: block !important;
+    }
+
+    .mobile-menu ul {
+        color: #DA5626;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    .mobile-menu ul a {
+        font-size: 9vw;
+        list-style: 1.2;
+        color: #DA5626;
+    }
+
+    .mobile-hamburger .close{
+        display: none;
+    }
+
+    .mobile-hamburger.active .close {
+        display: block;
+    }
+
+    .mobile-hamburger.active .ham {
+        display: none;
+    }
+
+    .mobile-hamburger .ham {
+        display: block;
+        margin-top: 13px;
+    }
+
+    #the-grounds {
+        display: block;
+    }
+
+    .grounds-map {
+        width: 100%;
+        overflow-y: scroll;
+    }
+
+    .grounds-map svg {
+        width: 300%;
+    }
+
+    .grounds-map .map-elements {
+        display: none;
+    }
+
+    #the-grounds .heading-short{
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    #dome-features {
+        top: 85px !important;
+        padding-top: 20px !important;
+    }
+
+    .dome h4 {
+        font-size: 28px !important;
+        line-height: 1.2;
+    }
+
+    .feature-grid {
+        font-size: 18px !important;
+        flex-wrap: wrap;
+        gap: 10px !important;
+        line-height: 1.2 !important;
+    }
+
+    .logos.flex {
+        gap: 20px;
+    }
+
+    .booking-toggle .btn {
+        margin-bottom: 20px;
+    }
+
+    .container .left h4 {
+        align-items: center;
+    }
+
+
+    .features-grid-cards .container p {
+        margin-bottom: 0px !important;
+    }
+
+    .owl-carousel {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .dome .item {
+        height: 29vh !important;
+    }
+
+    .facilities-wrapper .left {
+        text-align: center !important;
+    }
+
+    .facilities-wrapper .left .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .facilities-wrapper .left h4 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;    
+    }
+
+    #feastings .intro {
+        padding-bottom: 50px !important;
+    }
+
+    .flex-cols {
+        width: 92%;
+    }
+
+    .about-illo {
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+
+    .contact-info p {
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
+    }
+
+    .contact-info .container {
+        gap: 24px !important;
+    }
+
+    .contact-info {
+        padding-top: 50px !important;
+    }
+
+
+    .hero .carousel {
+        height: 80vh;
+    }
+
+    .owl-item .item {
+        height: 240px !important;
+    }
+
+    #retreats {
+        padding: 0 !important;
+    }
+    .mobile-header-top {
+        display: block;
+    }
+
+    .mobile-header-top ul {
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 20px;
+        font-family: 'Koulen', sans-serif;
+        font-size: 4.5vw;
+        line-height: 1.2;
+    }
+
+    .owl-prev, .owl-next {
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+    }
+}
+
