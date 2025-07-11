@@ -193,7 +193,7 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const accomodationButton = document.querySelector(".accommodation-button");
+    const accomodationButton = document.querySelector(".accomodation-button");
     const spaButton = document.querySelector(".spa-button");
     const bookingCal = document.querySelector(".booking-cal");
     const bookingSpa = document.querySelector(".booking-spa");
