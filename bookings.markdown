@@ -9,13 +9,15 @@ layout: default
     <h2>{{ page.title }}</h2>
   </div>
 
+  <!-- Toggle Buttons -->
   <div class="booking-toggle flex">
-    <div class="btn accomodation-button active-btn">Accommodation</div>
+    <div class="btn accomodation-button btn-active">Accommodation</div>
     <div class="btn spa-button">Spa Days</div>
-    <div class="btn Retreats-button">Retreats</div>
+    <div class="btn retreats-button">Retreats</div>
   </div>
 
-  <div class="platform booking-cal active">
+  <!-- Accommodation Calendar -->
+  <div class="platform booking-cal" style="display: block;">
     <div
       data-calendar-key="E55755E8B4F2753BF0525E801AA3DDE4932565249BE8DE0E1A4179AD7D69345D170EEF11BFBC38B3A7A51585C16A08CFEC6525BEA3AB1235"
       data-calendar-departure-picker="true"
@@ -26,7 +28,8 @@ layout: default
     <script src="https://secure.supercontrol.co.uk/components/embed.js"></script>
   </div>
 
-  <div class="platform booking-spa">
+  <!-- Spa Days iFrame -->
+  <div class="platform booking-spa" style="display: none;">
     <iframe
       src="https://www.supersaas.com/schedule/IntheStix/Spa_Days?view=free"
       width="100%"
@@ -34,7 +37,8 @@ layout: default
     ></iframe>
   </div>
 
-  <div class="platform booking-retreats">
+  <!-- Retreats iFrame -->
+  <div class="platform booking-retreats" style="display: none;">
     <iframe
       src="https://www.supersaas.com/schedule/IntheStix/retreats?view=free"
       width="100%"
@@ -46,37 +50,31 @@ layout: default
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".booking-toggle .btn");
-    const platforms = document.querySelectorAll(".platform");
+    const platforms = {
+      "accomodation-button": document.querySelector(".booking-cal"),
+      "spa-button": document.querySelector(".booking-spa"),
+      "retreats-button": document.querySelector(".booking-retreats"),
+    };
 
     buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        // Remove active class from all
-        buttons.forEach((btn) => btn.classList.remove("active-btn"));
-        platforms.forEach((pf) => pf.classList.remove("active"));
+      button.addEventListener("click", function () {
+        // Remove btn-active from all buttons
+        buttons.forEach((btn) => btn.classList.remove("btn-active"));
+
+        // Hide all platform sections
+        Object.values(platforms).forEach((el) => (el.style.display = "none"));
 
         // Add active class to clicked button
-        button.classList.add("active-btn");
+        this.classList.add("btn-active");
 
-        // Show corresponding platform
-        if (button.classList.contains("accomodation-button")) {
-          document.querySelector(".booking-cal").classList.add("active");
-        } else if (button.classList.contains("spa-button")) {
-          document.querySelector(".booking-spa").classList.add("active");
-        } else if (button.classList.contains("Retreats-button")) {
-          document
-            .querySelector(".booking-retreats")
-            .classList.add("active");
+        // Show the matching platform section
+        for (const key in platforms) {
+          if (this.classList.contains(key)) {
+            platforms[key].style.display = "block";
+            break;
+          }
         }
       });
     });
   });
 </script>
-
-<style>
-  .platform {
-    display: none;
-  }
-  .platform.active {
-    display: block;
-  }
-</style>
